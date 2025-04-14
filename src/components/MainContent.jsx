@@ -26,7 +26,7 @@ const MainContent = () => {
     from: { transform: 'scale(1) translateY(0)' },
     to: async (next) => {
       while (true) {
-        await next({ transform: 'scale(1.4) translateY(-20px) rotateX(-50deg)' });
+        await next({ transform: 'scale(2.4) translateY(-20px) rotateX(-50deg)' });
         await next({ transform: 'scale(1) translateY(0) rotateX(0deg)' });
       }
     },
