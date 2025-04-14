@@ -80,26 +80,39 @@ const MainContent = () => {
             }}>
               Madison Nunn
             </Text>            
-            <Text fontSize="lg" color="beige" mb={4} fontFamily="'Pathway Extreme', sans-serif">
+            <Text fontSize="md" color="beige" mb={4} fontFamily="'Pathway Extreme', sans-serif" fontWeight='bold'>
               Director of Women's Sports
             </Text>
             <VStack align="start" spacing={2} fontFamily="'Pathway Extreme', sans-serif">
               <HStack>
                 <Icon as={FaEnvelope} color='white'/>
-                <Link href="mailto:madison@athletexelite.com" color='beige'>madison@athletexelite.com</Link>
+                <Link href="mailto:madison@athletexelite.com" color='beige' fontWeight='bold'>madison@athletexelite.com</Link>
               </HStack>
               <HStack>
                 <Icon as={FaPhone} color='green.300'/>
-                <Text color='beige'>(210) 478-6918</Text>
+                <Text color='beige' fontWeight='bold'>(210) 478-6918</Text>
               </HStack>
               {/* <HStack>
                 <Icon as={FaLinkedin} color='royalblue' />
                 <Link href="https://www.linkedin.com/in/gabe-harvey-37ab90308/" isExternal color='beige'>linkedin.com/in/gabeharvey</Link>
               </HStack> */}
             </VStack>
-            <Text fontSize="2xl" fontWeight='bold' color="beige" mb={4} mt={4} fontFamily="'Tilt Prism', sans-serif">
-              Athlete X Elite
+            <Link href="https://www.athletexelite.com" isExternal _hover={{ textDecoration: 'none' }}>
+            <Text 
+                fontSize="2xl" 
+                fontWeight="bold" 
+                color="beige" 
+                mb={4} 
+                mt={4} 
+                fontFamily="'Tilt Prism', sans-serif"
+                _hover={{
+                transform: 'scale(1.1)', 
+                transition: 'transform 0.3s ease', 
+                }}
+            >
+                Athlete X Elite
             </Text>
+            </Link>
           </Flex>
         </animated.div>
 
@@ -123,7 +136,6 @@ const MainContent = () => {
             textAlign: 'center',
             color: 'beige',
             fontSize: '2.1rem',
-            fontFamily: "'Pacifico', cursive",
             fontWeight: 'bold',
             boxShadow: "gray 10px 10px 10px",
             marginBottom: '5px',
@@ -136,7 +148,7 @@ const MainContent = () => {
           }}
         >
           <Flex direction="column" align="center" justify="center" height="100%">
-            <Text>Madison Nunn</Text>
+            <Text fontFamily="'Pacifico', cursive">Madison Nunn</Text>
             <Text fontSize={16} fontFamily="'Pathway Extreme', sans-serif" color='beige' textShadow='none' marginTop={9}>©2025 All Rights Reserved</Text>
           </Flex>
         </animated.div>
