@@ -21,13 +21,16 @@ const MainContent = () => {
     setFlipped(!flipped);
   };
 
+  // Animation for name on mount
   const pulseBounceProps = useSpring({
-    loop: { reverse: true },
-    to: [
-      { transform: 'scale(1.4) translateY(-20px)' },
-      { transform: 'scale(1) translateY(0)' }
-    ],
-    config: { mass: 1, tension: 50, friction: 12 },
+    from: { transform: 'scale(1) translateY(0)' },
+    to: async (next) => {
+      while (true) {
+        await next({ transform: 'scale(1.4) translateY(-20px) rotateX(-50deg)' });
+        await next({ transform: 'scale(1) translateY(0) rotateX(0deg)' });
+      }
+    },
+    config: { mass: 5, tension: 150, friction: 12 },
   });
 
   return (
@@ -79,7 +82,7 @@ const MainContent = () => {
               mt={6}
               mb={2}
             />
-            {/* Animated Text */}
+            {/* Animated Name */}
             <animated.div style={pulseBounceProps}>
               <Text
                 className='card-name'
@@ -90,11 +93,11 @@ const MainContent = () => {
                 marginBottom='15px'
                 sx={{
                   textShadow: `
-                      0px 2px 4px rgba(184, 134, 11, 0.9),
-                      0px 4px 8px rgba(218, 165, 32, 0.8),
-                      0px 6px 12px rgba(255, 215, 0, 0.7),
-                      0px 8px 16px rgba(255, 239, 184, 0.6),
-                      0px 10px 20px rgba(255, 250, 205, 0.5)`
+                    0px 2px 4px rgba(184, 134, 11, 0.9),
+                    0px 4px 8px rgba(218, 165, 32, 0.8),
+                    0px 6px 12px rgba(255, 215, 0, 0.7),
+                    0px 8px 16px rgba(255, 239, 184, 0.6),
+                    0px 10px 20px rgba(255, 250, 205, 0.5)`
                 }}
               >
                 Madison Nunn
@@ -105,11 +108,11 @@ const MainContent = () => {
             </Text>
             <VStack align="start" spacing={2} fontFamily="'Pathway Extreme', sans-serif">
               <HStack>
-                <Icon as={FaEnvelope} color='white'/>
+                <Icon as={FaEnvelope} color='white' />
                 <Link href="mailto:madison@athletexelite.com" color='beige' fontWeight='bold'>madison@athletexelite.com</Link>
               </HStack>
               <HStack>
-                <Icon as={FaPhone} color='green.300'/>
+                <Icon as={FaPhone} color='green.300' />
                 <Text color='beige' fontWeight='bold'>(210) 478-6918</Text>
               </HStack>
             </VStack>
@@ -156,11 +159,11 @@ const MainContent = () => {
             boxShadow: "gray 10px 10px 10px",
             marginBottom: '5px',
             textShadow: `
-                0px 2px 4px rgba(184, 134, 11, 0.9),
-                0px 4px 8px rgba(218, 165, 32, 0.8),
-                0px 6px 12px rgba(255, 215, 0, 0.7),
-                0px 8px 16px rgba(255, 239, 184, 0.6),
-                0px 10px 20px rgba(255, 250, 205, 0.5)`
+              0px 2px 4px rgba(184, 134, 11, 0.9),
+              0px 4px 8px rgba(218, 165, 32, 0.8),
+              0px 6px 12px rgba(255, 215, 0, 0.7),
+              0px 8px 16px rgba(255, 239, 184, 0.6),
+              0px 10px 20px rgba(255, 250, 205, 0.5)`
           }}
         >
           <Flex direction="column" align="center" justify="center" height="100%">
