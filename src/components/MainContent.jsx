@@ -51,12 +51,12 @@ const MainContent = () => {
             position: 'absolute',
             width: '100%',
             height: '100%',
-            backgroundColor: '#FF5E9C',
+            backgroundColor: '#4682B4',
             backgroundImage: 'url("/tech-photo.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             borderRadius: '10px',
-            border: '3px solid #800000',
+            border: '3px solid #FFD700',
             padding: '16px',
             boxShadow: "gray 10px 10px 10px",
           }}
@@ -65,18 +65,18 @@ const MainContent = () => {
             <Image
               borderRadius="md"
               boxSize="150px"
-              src="/Madison-Nunn.png"
+              src="/madison-pic-4.png"
               alt="Profile Image"
               mt={6}
               mb={2}
             />
             <Text className='card-name' fontSize="3xl" fontWeight="bold" color="beige" fontFamily="'Pacifico', cursive" marginBottom= '15px' sx={{
                 textShadow: `
-                    0px 2px 4px rgba(128, 0, 0, 0.9),
-                    0px 4px 8px rgba(199, 21, 133, 0.8),
-                    0px 6px 12px rgba(255, 20, 147, 0.7),
-                    0px 8px 16px rgba(255, 105, 180, 0.6),
-                    0px 10px 20px rgba(255, 182, 193, 0.5)`,
+                0px 2px 4px rgba(70, 130, 180, 0.9), 
+                0px 4px 8px rgba(65, 105, 225, 0.8),
+                0px 6px 12px rgba(100, 149, 237, 0.7),
+                0px 8px 16px rgba(1, 2, 2, 0.6),
+                0px 10px 20px rgba(240, 255, 255, 0.5)`,
             }}>
               Madison Nunn
             </Text>            
@@ -127,9 +127,9 @@ const MainContent = () => {
             backgroundImage: 'url("/tech-photo.jpg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundColor: '#FF5E9C',
+            backgroundColor: '#4682B4',
             borderRadius: '10px',
-            border: '3px solid #800000',
+            border: '3px solid #FFD700',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -140,11 +140,11 @@ const MainContent = () => {
             boxShadow: "gray 10px 10px 10px",
             marginBottom: '5px',
             textShadow: `
-                0px 2px 4px rgba(128, 0, 0, 0.9),
-                0px 4px 8px rgba(199, 21, 133, 0.8),
-                0px 6px 12px rgba(255, 20, 147, 0.7),
-                0px 8px 16px rgba(255, 105, 180, 0.6),
-                0px 10px 20px rgba(255, 182, 193, 0.5)`,
+                0px 2px 4px rgba(70, 130, 180, 0.9), 
+                0px 4px 8px rgba(65, 105, 225, 0.8),
+                0px 6px 12px rgba(100, 149, 237, 0.7),
+                0px 8px 16px rgba(1, 2, 2, 0.6),
+                0px 10px 20px rgba(240, 255, 255, 0.5)`,
           }}
         >
           <Flex direction="column" align="center" justify="center" height="100%">
