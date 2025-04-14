@@ -72,11 +72,11 @@ const MainContent = () => {
             />
             <Text className='card-name' fontSize="3xl" fontWeight="bold" color="beige" fontFamily="'Pacifico', cursive" marginBottom= '15px' sx={{
                 textShadow: `
-                0px 2px 4px rgba(70, 130, 180, 0.9), 
-                0px 4px 8px rgba(65, 105, 225, 0.8),
-                0px 6px 12px rgba(100, 149, 237, 0.7),
-                0px 8px 16px rgba(1, 2, 2, 0.6),
-                0px 10px 20px rgba(240, 255, 255, 0.5)`,
+                    0px 2px 4px rgba(184, 134, 11, 0.9),
+                    0px 4px 8px rgba(218, 165, 32, 0.8),
+                    0px 6px 12px rgba(255, 215, 0, 0.7),
+                    0px 8px 16px rgba(255, 239, 184, 0.6),
+                    0px 10px 20px rgba(255, 250, 205, 0.5)`,
             }}>
               Madison Nunn
             </Text>            
@@ -140,11 +140,11 @@ const MainContent = () => {
             boxShadow: "gray 10px 10px 10px",
             marginBottom: '5px',
             textShadow: `
-                0px 2px 4px rgba(70, 130, 180, 0.9), 
-                0px 4px 8px rgba(65, 105, 225, 0.8),
-                0px 6px 12px rgba(100, 149, 237, 0.7),
-                0px 8px 16px rgba(1, 2, 2, 0.6),
-                0px 10px 20px rgba(240, 255, 255, 0.5)`,
+                0px 2px 4px rgba(184, 134, 11, 0.9),
+                0px 4px 8px rgba(218, 165, 32, 0.8),
+                0px 6px 12px rgba(255, 215, 0, 0.7),
+                0px 8px 16px rgba(255, 239, 184, 0.6),
+                0px 10px 20px rgba(255, 250, 205, 0.5)`,
           }}
         >
           <Flex direction="column" align="center" justify="center" height="100%">
