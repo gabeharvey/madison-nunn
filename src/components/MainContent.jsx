@@ -29,17 +29,16 @@ const MainContent = () => {
   };
 
   const pulseBounceProps = useSpring({
-    from: { transform: 'scale(1) translateY(0)', opacity: 0 },
-    to: async (next) => {
-      await next({ opacity: 1 }); 
-      while (true) {
-        await next({ transform: 'scale(2.4) translateY(-6px) rotateX(-8deg)' });
-        await next({ transform: 'scale(1) translateY(0) rotateX(0deg)' });
-      }
+    from: {
+      transform: 'scale(5) translateY(-200px) rotateX(0deg)',
+      opacity: 0,
     },
-    config: { mass: 5, tension: 180, friction: 18 },
-  });
-  
+    to: {
+      transform: 'scale(1) translateY(0px) rotateX(0deg)',
+      opacity: 1,
+    },
+    config: { mass: 5, tension: 280, friction: 24 },
+  });  
 
   return (
     <Flex
