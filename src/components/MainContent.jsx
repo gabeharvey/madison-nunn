@@ -3,6 +3,7 @@ import { Flex, Image, Text, VStack, HStack, Icon, Link } from '@chakra-ui/react'
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 // eslint-disable-next-line no-unused-vars
 import { useSpring, animated } from '@react-spring/web';
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 const MainContent = () => {
   const [flipped, setFlipped] = React.useState(false);
@@ -168,7 +169,7 @@ const MainContent = () => {
 
         {/* Back Side */}
         <animated.div
-          style={{
+        style={{
             backfaceVisibility: 'hidden',
             position: 'absolute',
             width: '100%',
@@ -190,25 +191,48 @@ const MainContent = () => {
             boxShadow: 'gray 10px 10px 10px',
             marginBottom: '5px',
             textShadow: `
-              0px 2px 4px rgba(184, 134, 11, 0.9),
-              0px 4px 8px rgba(218, 165, 32, 0.8),
-              0px 6px 12px rgba(255, 215, 0, 0.7),
-              0px 8px 16px rgba(255, 239, 184, 0.6),
-              0px 10px 20px rgba(255, 250, 205, 0.5)`,
-          }}
+            0px 2px 4px rgba(184, 134, 11, 0.9),
+            0px 4px 8px rgba(218, 165, 32, 0.8),
+            0px 6px 12px rgba(255, 215, 0, 0.7),
+            0px 8px 16px rgba(255, 239, 184, 0.6),
+            0px 10px 20px rgba(255, 250, 205, 0.5)`,
+        }}
         >
-          <Flex direction="column" align="center" justify="center" height="100%">
+        <Flex direction="column" align="center" justify="center" height="100%">
             <Text fontFamily="'Pacifico', cursive">Madison Nunn</Text>
-            <Text
-              fontSize={16}
-              fontFamily="'Pathway Extreme', sans-serif"
-              color="beige"
-              textShadow="none"
-              marginTop={9}
+            <Flex gap={6} marginTop={9}>
+            <a
+                href="https://www.facebook.com/people/Athlete-X-Elite/61568944931104/?mibextid=LQQJ4d&rdid=TEUVJDRMaCDf59oU&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17sXncDzHY%2F%3Fmibextid%3DLQQJ4d"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ transition: 'transform 0.2s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             >
-              ©2025 All Rights Reserved
-            </Text>
-          </Flex>
+                <FaFacebook size={36} color="#1877F2" />
+            </a>
+            <a
+                href="https://www.instagram.com/athlete_x_elite"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ transition: 'transform 0.2s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            >
+                <FaInstagram size={36} color="#E1306C" />
+            </a>
+            <a
+                href="https://www.tiktok.com/@athlete_x_elite"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ transition: 'transform 0.2s' }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.2)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            >
+                <FaTiktok size={36} color="#69C9D0" />
+            </a>
+            </Flex>
+        </Flex>
         </animated.div>
       </animated.div>
     </Flex>
