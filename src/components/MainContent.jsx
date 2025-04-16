@@ -29,16 +29,18 @@ const MainContent = () => {
     setFlipped(!flipped);
   };
 
-  const pulseBounceProps = useSpring({
+  const funNameAnimation = useSpring({
     from: {
-      transform: 'scale(5) translateY(-200px) rotateX(0deg)',
       opacity: 0,
+      transform: 'scale(0.5) translateY(-50px)',
+      filter: 'brightness(1.5)',
     },
-    to: {
-      transform: 'scale(1) translateY(0px) rotateX(0deg)',
-      opacity: 1,
+    to: async (next) => {
+      await next({ opacity: 1, transform: 'scale(1.1) translateY(0px)' });
+      await next({ transform: 'scale(1) translateY(0px)', filter: 'brightness(1)' });
     },
-    config: { mass: 5, tension: 280, friction: 24 },
+    config: { mass: 2, tension: 220, friction: 20 },
+    delay: 1000,
   });  
 
   return (
@@ -101,7 +103,7 @@ const MainContent = () => {
             }}
             />
             {/* Animated Name */}
-            <animated.div style={{ ...pulseBounceProps, willChange: 'transform, opacity' }}>
+            <animated.div style={{ ...funNameAnimation, willChange: 'transform, opacity, filter' }}>
                 <Text
                     className="card-name"
                     fontSize="3xl"
